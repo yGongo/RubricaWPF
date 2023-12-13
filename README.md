@@ -15,3 +15,31 @@ Nella classe Contatto, è stata aggiunta una proprietà Numero per rappresentare
     }
 }
 ```
+## Modifiche apportate al metodo dgDati_LoadingRow
+Il metodo dgDati_LoadingRow è stato aggiornato per colorare le righe di giallo se il numero di telefono inizia con il numero '3'.
+```namespace Eugenio.Malenchi._4i.WPFtelefono
+{
+    public partial class MainWindow : Window
+    {
+        // ... (resta invariato)
+        private void dgDati_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+            Contatto c = e.Row.Item as Contatto;
+            if (c != null)
+            {
+                if (c.Pk == 0)
+                {
+                    e.Row.Background = Brushes.Red;
+                    e.Row.Foreground = Brushes.White;
+                }
+                else if (c.Numero.StartsWith("3"))
+                {
+                    e.Row.Background = Brushes.Yellow;
+                    e.Row.Foreground = Brushes.White;
+                }
+            }
+        }
+        // ...
+    }
+}
+```
