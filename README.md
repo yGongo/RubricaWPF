@@ -5,7 +5,7 @@ Questo progetto WPF (Windows Presentation Foundation) chiamato wpfRubrica è sta
 
 ## Modifiche apportate alla classe Contatto
 Nella classe Contatto, è stata aggiunta una proprietà Numero per rappresentare il numero di telefono dei contatti.
-''' namespace Eugenio.Malenchi._4i.WPFtelefono
+``` namespace Eugenio.Malenchi._4i.WPFtelefono
 {
     class Contatto
     {
@@ -14,4 +14,4 @@ Nella classe Contatto, è stata aggiunta una proprietà Numero per rappresentare
         // ...
     }
 }
-'''
+```
